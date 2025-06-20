@@ -1,6 +1,8 @@
 import axios from 'axios'
 
 const movieBaseUrl = 'https://api.themoviedb.org/3/movie'
+const movieByGenreBaseURL='https://api.themoviedb.org/3/discover/movie';
+
 const options = {
     method: 'GET',
     headers: {
@@ -10,7 +12,9 @@ const options = {
   };
 
   const getPopularMovies =  axios.get(movieBaseUrl + '/popular?language=en-US&page=1' , options)
+  const getMovieByGenreId=(id:number)=>axios.get(movieByGenreBaseURL+"?with_genres="+id, options)
 
   export default {
-    getPopularMovies
+    getPopularMovies,
+    getMovieByGenreId
   }
