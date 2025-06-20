@@ -1,6 +1,7 @@
 import Header from '../Components/Header'
 import Hero from '../Components/Hero'
 import GenreMovieList from '../Components/GenreMovieList'
+import Test from '../Components/Test'
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
      <Header />
      <Hero />
      <GenreMovieList />
+     <Test />
     </>
    
   )
